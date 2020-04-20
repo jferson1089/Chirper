@@ -2,21 +2,15 @@ import React, { useReducer } from 'react'
 import Users from './Users'
 import {
     Navbar,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
+    NavbarBrand
+
 } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Chirps from './Chirps'
 import Sign from './Sign'
 import Create from './Create'
 import { Route, Link } from "react-router-dom"
+
 
 function Feed() {
     return (

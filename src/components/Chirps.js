@@ -12,6 +12,7 @@ function Chirps() {
             const resp = await getAllChirps()
             setChirps(resp)
             console.log('getallchirps', resp)
+
         }
         makeAPICall()
     }, [])
@@ -21,6 +22,8 @@ function Chirps() {
             <li key={index}>{chirp.username}
                 <p>{chirp.body}</p>
                 <p>{chirp.date}</p>
+                <p>{chirp.numLikes}</p>
+                <hr />
             </li>
         )
     })

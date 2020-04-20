@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
 
+
 function UserChirps() {
+
 
 
 
     return (
         <>
-            List of User Chirps Appears In this Box
+            user chrips here
             <hr /></>
     )
 }

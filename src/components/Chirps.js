@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useReducer } from 'react'
 import { getAllChirps } from '../service/api-helper'
-
+import ChirpComments from './ChirpComments'
 
 
 function Chirps() {
@@ -23,6 +23,8 @@ function Chirps() {
                 <p>{chirp.body}</p>
                 <p>{chirp.date}</p>
                 <p>{chirp.numLikes}</p>
+                <hr />
+                <ChirpComments chirpsComments={chirps} />
                 <hr />
             </li>
         )

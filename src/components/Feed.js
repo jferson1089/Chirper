@@ -10,6 +10,7 @@ import Chirps from './Chirps'
 import Sign from './Sign'
 import Create from './Create'
 import { Route, Link } from "react-router-dom"
+import Search from './Search'
 
 
 function Feed() {
@@ -23,6 +24,7 @@ function Feed() {
                 <Route exact path='/create' component={Create} />
                 <Route exact path="/signup" component={Sign} />
                 <Route exact path='/users' component={Users} />
+                <Route exact path='/search' component={Search} />
 
 
 
@@ -35,10 +37,17 @@ function Feed() {
                     <Link to='/create'>
                         <NavbarBrand href="/create">Chirp Out</NavbarBrand>
                     </Link>
-                    <NavbarBrand href="/users">Users</NavbarBrand>
+                    <Link to='/users'>
+                        <NavbarBrand href="/users">Users</NavbarBrand>
+                    </Link>
+                    <Link to='/search'>
+                        <NavbarBrand href="/signup">Search</NavbarBrand>
+                    </Link>
+
                     <Link to='/signup'>
                         <NavbarBrand href="/signup">Sign Up</NavbarBrand>
                     </Link>
+
 
 
                 </Navbar>

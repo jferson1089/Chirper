@@ -86,12 +86,14 @@ function Feed() {
                     <Link to="/create">
                         <NavbarBrand href="/create"><i class="fas fa-play"></i></NavbarBrand>
                     </Link>
-                    <NavbarBrand href="/users"><i class="fas fa-users"></i></NavbarBrand>
+                    <Link to='/users'>
+                        <NavbarBrand href="/users"><i class="fas fa-users"></i></NavbarBrand>
+                    </Link>
                     <Link to="/signup">
                         <NavbarBrand href="/signup"><i class="fas fa-sign-in-alt"></i></NavbarBrand>
                     </Link>
                 </Navbar>
-            </nav>
+            </nav >
         </>
     );
 

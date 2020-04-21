@@ -3,11 +3,8 @@ import { getAllChirps } from '../service/api-helper'
 import ChirpComments from './ChirpComments'
 import DeleteChirp from './DeleteChirp'
 import FormatDate from '../service/formatDate'
-
-
-
 import '../App.css'
-import { Breakpoint, setDefaultBreakpoints } from 'react-socks';
+
 
 
 function Chirps() {
@@ -71,7 +68,6 @@ function Chirps() {
             <ul>
                 {setDefaultBreakpoints}
                 {renderChirps}
-
             </ul>
         </>
     )

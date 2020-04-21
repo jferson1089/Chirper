@@ -122,4 +122,11 @@ ul>fas {
 button {
   height:50px;
 }
-
+.tablet{
+  display:none;
+}
+@media(min-width:320px){
+  .tablet{
+    display: block;
+  }
+}

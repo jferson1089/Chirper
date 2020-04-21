@@ -12,8 +12,6 @@ function App() {
         <header >
         <Button className="topNav" color="secondary"><i class="fab fa-earlybirds"></i></Button>{' '}
         </header>
-        
-        
       </Link>
       <Feed />
       {/* <SlModal /> */}

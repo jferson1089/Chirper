@@ -59,40 +59,19 @@
 
 import React, { useReducer } from "react";
 import Users from "./Users";
-// import { Navbar, Button, Nav, NavbarBrand } from "reactstrap";
+import { Navbar, Button, Nav, NavbarBrand , Col, Form, Label, Input, FormGroup} from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Chirps from "./Chirps";
 import Sign from "./Sign";
 import Create from "./Create";
-import { Button, Form, FormGroup, Label, Input, Col, Navbar, Nav, NavbarBrand } from 'reactstrap';
 import { Route, Link } from "react-router-dom";
-import { Breakpoint, setDefaultBreakpoints } from 'react-socks';
 import '../App.css'
-
 function Feed() {
-  setDefaultBreakpoints([
-    { xs: 0 },
-    { s: 376 },
-    { m: 426 },
-    { l: 769 },
-    { xl: 1025 }
-  ]);
   return (
     <>
-   
- 
-
-      <section>
-        <Route exact path="/feed" component={Chirps} />
-        <Route exact path="/create" component={Create} />
-        <Route exact path="/signup" component={Sign} />
-        <Route exact path="/users" component={Users} />
-      </section>
-
       <br />
       <br />
-      <Breakpoint medium only>
-    <>
+    <div className="tablet">
             <Col>
                 <Form>
                     <FormGroup>
@@ -106,11 +85,13 @@ function Feed() {
                     <Button color="warning">Chirp IT out</Button>{' '}
                 </Form>
             </Col>
-        </>
-      </Breakpoint>
-      <ul>
-    {setDefaultBreakpoints}
-    </ul>
+        </div>
+        <section>
+        <Route exact path="/feed" component={Chirps} />
+        <Route exact path="/create" component={Create} />
+        <Route exact path="/signup" component={Sign} />
+        <Route exact path="/users" component={Users} />
+      </section>
         <br></br>
       <nav className="bottomNav">
         <Navbar color="secondary" light expand="md"  >

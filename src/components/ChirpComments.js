@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from 'react'
+import {getCommentById} from '../service/api-helper'
 
 function ChirpComments({id}) {
     const [comment,setComment]= useState('')
@@ -7,14 +8,14 @@ function ChirpComments({id}) {
         const makeAPICall = async () => {
             const resp = await getCommentById(id)
             setComment(resp)
-            console.log('getcommentbyid', resp)
+            console.log('getCommentById', resp)
         }
         makeAPICall()
     }, [])
 
 
 
-    console.log('chirpcommnets - ', props)
+    console.log('chirpcommnets - ', id)
    
     return (
         <div className="chirpStyle">

@@ -86,7 +86,14 @@ h4{
 .fas{
 color:white;
 }
-
+.vl {
+  border-left: 6px solid green;
+  height: 500px;
+}
+.vl {
+  border-right: 6px solid green;
+  height: 500px;
+}
 ul {
   color:black;
   margin-right:15%;
@@ -97,9 +104,12 @@ ul {
   font-family:arial;
   background-color:#EFF0F1;
 }
- section {
-   padding-top:50px;
- }
+.chirpStyle:Hover{
+  background-color:gray;
+}
+ /* section {
+   padding-top:0px;
+ } */
 #name {
   font-size:16px;
   text-align:left;
@@ -125,8 +135,16 @@ button {
 .tablet{
   display:none;
 }
-@media(min-width:320px){
+
+@media(min-width:321px){
   .tablet{
     display: block;
+    margin-left:10%;
+    margin-right:10%;
+    border: 2px;
+    border-color: rgba(red, green, blue, alpha)
   }
+  /* .tablet:Hover{
+    background-color:gray;
+  } */
 }

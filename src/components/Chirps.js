@@ -18,6 +18,7 @@ function Chirps() {
         }
         makeAPICall()
     }, [])
+    
 
     const renderChirps = chirps.map((chirp, index) => {
 
@@ -52,7 +53,7 @@ function Chirps() {
                 <p>Date:{chirp.date}</p>
                 <p><i class="fas fa-hand-spock"></i> {chirp.numLikes}</p>
                 <hr />
-                <ChirpComments chirpsComments={chirps} />
+                {/* <ChirpComments chirpsComments={chirps} /> */}
                 <hr />
             </li>
 

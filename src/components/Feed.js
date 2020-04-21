@@ -69,9 +69,12 @@ import '../App.css'
 function Feed() {
   return (
     <>
+    
       <br />
       <br />
     <div className="tablet">
+   
+    
             <Col>
                 <Form>
                     <FormGroup>
@@ -96,11 +99,11 @@ function Feed() {
       <nav className="bottomNav">
         <Navbar color="secondary" light expand="md"  >
           <Link to="/create">
-            <NavbarBrand href="/create"><i class="fas fa-play"></i></NavbarBrand>
+            <NavbarBrand href="/create"><i className="fas fa-play"></i></NavbarBrand>
           </Link>
-          <NavbarBrand href="/users"><i class="fas fa-users"></i></NavbarBrand>
+          <NavbarBrand href="/users"><i className="fas fa-users"></i></NavbarBrand>
           <Link to="/signup">
-            <NavbarBrand href="/signup"><i class="fas fa-sign-in-alt"></i></NavbarBrand>
+            <NavbarBrand href="/signup"><i className="fas fa-sign-in-alt"></i></NavbarBrand>
           </Link>
         </Navbar>
       </nav>

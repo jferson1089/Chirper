@@ -2,14 +2,19 @@ import React, { useState } from 'react'
 import { FaTrash } from 'react-icons/fa'
 import { deleteChirp } from '../service/api-helper'
 
-function DeleteChirp() {
-    const [chirp, setChirp] = useState('')
+function DeleteChirp(props) {
+    console.log("delete chirps - props - ", props)
+    console.log('deleted this chirp', props.chirps[0]._id)
+    const [chirp, setChirp] = useState()
 
     const handleDeleteChirp = async (id) => {
+        console.log('this is getting clicked')
         const json = await deleteChirp(id)
-        console.log('deleted this chirp', json)
+
+        console.log('when clicked we get ', json)
+
         if (json.status === 'success') {
-            const chirpsArr = chirp.filter(chirp => chirp._id !== id)
+            const chirpsArr = props.chirps.filter(chirp => chirp._id !== id)
             setChirp(chirpsArr)
         }
     }
@@ -17,7 +22,7 @@ function DeleteChirp() {
     return (
         <>
             <FaTrash
-                onClick={handleDeleteChirp}
+                onClick={() => handleDeleteChirp(props._id)}
             />
         </>
     )

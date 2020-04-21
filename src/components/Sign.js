@@ -1,11 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { createUser } from '../service/api-helper'
 
 function Sign() {
 
+    const [user, setUser] = useState("")
+    const [password, setPassword] = useState("")
+    const [firstChirp, setFirstChirp] = useState("")
+
+    const handleUserName = e => {
+        setUser(e.target.value)
+    }
+    const handlePassword = e => {
+        setPassword(e.target.value)
+    }
+    const handleFirstChirp = e => {
+        setFirstChirp(e.target.value)
+    }
+
+    const handleCreateUser = async () => {
+
+        const json = await createUser({
+            "username": user,
+            "pwd": password,
+            "body": firstChirp
+        })
+    }
+
     return (
         <>
-            <Form>
+            {/* <Form>
                 <Col>
                     <Col>
                         <Row form>
@@ -29,7 +53,14 @@ function Sign() {
                         <Button>Sign in</Button>
                     </Col>
                 </Col>
-            </Form>
+            </Form> */}
+            <div>
+                <form onSubmit={handleCreateUser}>
+                    <input type='text' onChange={handleUserName} value={user} placeholder='Pick Your User Name' ></input>
+                    <input type='text' onChange={handlePassword} value={password} placeholder="Pick a Strong Password"></input>
+                    <input type='text' onChange={handleFirstChirp} value={firstChirp} placeholder="Write your first Chrip"></input>
+                </form>
+            </div>
         </>
 
     )

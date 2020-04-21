@@ -2,6 +2,7 @@ import React, { useState, useEffect, useReducer } from 'react'
 import { getAllChirps } from '../service/api-helper'
 import ChirpComments from './ChirpComments'
 import DeleteChirp from './DeleteChirp'
+import FormatDate from '../service/formatDate'
 
 
 
@@ -54,6 +55,7 @@ function Chirps() {
                 <p>{chirp.body}</p>
                 <p>Date:{chirp.date}</p>
                 <p><i class="fas fa-hand-spock"></i> {chirp.numLikes}</p>
+                {/* <DeleteChirp chirps={chirps} /> */}
                 <hr />
                 <ChirpComments chirpsComments={chirps} />
                 <hr />
@@ -64,10 +66,10 @@ function Chirps() {
 
 
     return (
-        
+
         <>
             <ul>
-            {setDefaultBreakpoints}
+                {setDefaultBreakpoints}
                 {renderChirps}
 
             </ul>

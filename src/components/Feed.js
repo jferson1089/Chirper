@@ -70,7 +70,6 @@ import { Breakpoint, setDefaultBreakpoints } from 'react-socks';
 import '../App.css'
 
 function Feed() {
-<<<<<<< HEAD
   setDefaultBreakpoints([
     { xs: 0 },
     { s: 376 },
@@ -126,38 +125,6 @@ function Feed() {
       </nav>
     </>
   );
-=======
-    return (
-        <>
-
-
-            <section>
-                <Route exact path="/feed" component={Chirps} />
-                <Route exact path="/create" component={Create} />
-                <Route exact path="/signup" component={Sign} />
-                <Route exact path="/users" component={Users} />
-            </section>
-
-            <br />
-            <br />
-
-            <nav className="bottomNav">
-                <Navbar color="secondary" light expand="md"  >
-                    <Link to="/create">
-                        <NavbarBrand href="/create"><i class="fas fa-play"></i></NavbarBrand>
-                    </Link>
-                    <Link to='/users'>
-                        <NavbarBrand href="/users"><i class="fas fa-users"></i></NavbarBrand>
-                    </Link>
-                    <Link to="/signup">
-                        <NavbarBrand href="/signup"><i class="fas fa-sign-in-alt"></i></NavbarBrand>
-                    </Link>
-                </Navbar>
-            </nav >
-        </>
-    );
-
->>>>>>> origin/master
 }
 
 export default Feed;

@@ -72,6 +72,7 @@ h4{
 .topNav{
   position: fixed;
   width: 100%;
+  margin-top:-20px;
 }
 .fab{
   color:white;

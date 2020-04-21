@@ -4,7 +4,7 @@ import Feed from "./components/Feed";
 import Login from "./components/Login";
 import SlModal from "./components/SignupLoginModal";
 import { Link } from "react-router-dom";
-import { Navbar, Button, Nav, NavbarBrand } from "reactstrap";
+import { Button} from "reactstrap";
 function App() {
   return (
     <body>
@@ -13,9 +13,9 @@ function App() {
         <Button className="topNav" color="secondary"><i class="fab fa-earlybirds"></i></Button>{' '}
         </header>
         
-        <Feed />
+        
       </Link>
-      {/* <Feed /> */}
+      <Feed />
       {/* <SlModal /> */}
     </body>
   );

@@ -6,10 +6,10 @@ import DeleteChirp from './DeleteChirp'
 
 
 import '../App.css'
+import { Breakpoint, setDefaultBreakpoints } from 'react-socks';
 
 
 function Chirps() {
-
     const [chirps, setChirps] = useState([])
 
     useEffect(() => {
@@ -64,8 +64,10 @@ function Chirps() {
 
 
     return (
+        
         <>
             <ul>
+            {setDefaultBreakpoints}
                 {renderChirps}
 
             </ul>

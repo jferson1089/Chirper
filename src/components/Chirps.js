@@ -2,9 +2,10 @@ import React, { useState, useEffect, useReducer } from 'react'
 import { getAllChirps } from '../service/api-helper'
 import ChirpComments from './ChirpComments'
 import '../App.css'
+import { Breakpoint, setDefaultBreakpoints } from 'react-socks';
+
 
 function Chirps() {
-
     const [chirps, setChirps] = useState([])
 
     useEffect(() => {
@@ -33,8 +34,10 @@ function Chirps() {
 
 
     return (
+        
         <>
             <ul>
+            {setDefaultBreakpoints}
                 {renderChirps}
 
             </ul>

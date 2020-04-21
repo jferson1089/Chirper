@@ -4,6 +4,7 @@ const api = axios.create({
     baseURL: 'https://chirper-back.herokuapp.com/'
 })
 
+// User functions
 export const getAllUsers = async () => {
     const resp = await api.get('/users/')
     return resp.data
@@ -29,6 +30,7 @@ export const deleteUser = async (username) => {
     return resp.data
 }
 
+// Chirp functions
 export const getAllChirps = async () => {
     const resp = await api.get('/chirps')
     return resp.data
@@ -59,6 +61,7 @@ export const deleteChirp = async (id) => {
     return resp.data
 }
 
+// Comment functions
 export const getAllComments = async () => {
     const resp = await api.get('/comments')
     return resp.data

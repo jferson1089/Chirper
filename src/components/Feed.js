@@ -21,7 +21,7 @@ function Feed() {
 
       <br />
       <br />
-     
+    
       <nav className="bottomNav">
         <Navbar color="secondary" light expand="md"  >
           <Link to="/create">

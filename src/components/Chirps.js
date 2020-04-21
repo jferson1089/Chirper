@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useReducer } from 'react'
 import { getAllChirps } from '../service/api-helper'
 import ChirpComments from './ChirpComments'
-
+import '../App.css'
 
 function Chirps() {
 
@@ -19,12 +19,13 @@ function Chirps() {
 
     const renderChirps = chirps.map((chirp, index) => {
         return (
-            <li key={index}>{chirp.username}
+            <li key={index}>
+                <p id="name">{chirp.username}</p>
                 <p>{chirp.body}</p>
-                <p>{chirp.date}</p>
-                <p>{chirp.numLikes}</p>
+                <p>Date:{chirp.date}</p>
+                <p><i class="fas fa-hand-spock"></i> {chirp.numLikes}</p>
                 <hr />
-                <ChirpComments chirpsComments={chirps} />
+                <ChirpComments chirpsComments={chirps}/>
                 <hr />
             </li>
         )
